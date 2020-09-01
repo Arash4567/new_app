@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+     <style>
+table {
+  width: 50%;
+  counter-reset: row-num - 1;
+}
+table tr {
+  counter-increment: row-num;
+}
+table tr td:first-child::before {
+    content: counter(row-num) "";
+}
+
+     </style>
+    <title>Pupil registration</title>
+</head>
+<body>
+   <div class="container md-3">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>N</th>
+          <th>Name</th>
+          <th>Group</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%if (records.length >0){ %>
+        <% records.forEach(function(row){ %>
+        <tr>
+          <td></td>
+          <td><%= row.name %></td>
+          <td><%= row.group %></td>
+          <td><%= row.password %></td>
+        </tr>
+        <% })}else{ %>
+          <tr>
+              <td colspan="4">No Record Found</td>
+              
+            </tr>
+          <% } %>
+      </tbody>
+    </table>
+    <a href="/post"><button class="btn btn-danger">POST</button></a>
+   </div>
+</body>
+</html>

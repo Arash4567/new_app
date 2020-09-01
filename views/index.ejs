@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Pupil registration</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 mx-auto">
+                <div class="card text-left">
+                  <img class="card-img-top"src="" alt="">
+                  <div class="card-body">
+                    <h4 class="card-title">Registration</h4>
+                        <form action="/post" method="POST">
+                            <label for="first">Name</label>
+                            <input type="text" name="first_name" id="first" class="form-control">
+                            <label for="first">Password</label>
+                            <input type="password" name="password" id="pass" class="form-control">
+                            <label for="group">Group</label>
+                            <input type="text" name="group" id="group" class="form-control"><br>
+                            <input class="btn btn-primary form-control" type="submit" value="Submit">
+                        </form>
+                        <div class="row mx-auto">
+                            <a href="/post"><button type="reset" class="btn btn-warning col px-md-5">Back</button></a>  
+                        <a href="/get"><button class="btn btn-danger col px-md-5">LIST</button></a>
+                        </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
